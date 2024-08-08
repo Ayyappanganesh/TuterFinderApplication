@@ -1,0 +1,49 @@
+.header {
+  background: #003366;
+  color: #fff;
+  padding: 10px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo-container {
+  display: flex;
+  align-items:center;
+}
+
+.logo {
+  height: 50px;
+  margin-right: 10px; /* Adjust spacing between logo and company name */
+  padding-right: 100px;
+  padding-right: 10px;
+}
+
+.company-name {
+  font-size: 1.5rem; /* Adjust font size of company name */
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.nav-links a:hover {
+  border-bottom: 2px solid #ff5722;
+}
