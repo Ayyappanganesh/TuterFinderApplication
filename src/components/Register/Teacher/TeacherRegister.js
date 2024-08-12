@@ -37,7 +37,7 @@ const TeacherRegister = () => {
   return (
     <div className="teacher-register-container">
       <div className="back-button" onClick={() => navigate('/')}>
-        <ArrowCircleLeftIcon /> 
+        <ArrowCircleLeftIcon />
       </div>
       <div className="teacher-register-content">
         <h1 className="teacher-register-title">Teacher Registration</h1>

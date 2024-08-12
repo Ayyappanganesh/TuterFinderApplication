@@ -5,7 +5,7 @@ import './Footer.css';
 const Footer = () => {
   return (
     <footer className="footer">
-      <Typography variant="body2">&copy; 2024 TutorQuest. All rights reserved.</Typography>
+      <Typography variant="body2">&copy; 2024 TutorTrek. All rights reserved.</Typography>
     </footer>
   );
 };

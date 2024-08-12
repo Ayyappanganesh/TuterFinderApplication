@@ -162,7 +162,7 @@ const Search = () => {
             ))}
           </ul>
         ) : (
-          <p>No results found.</p>
+          <p></p>
         )}
       </div>
     </div>

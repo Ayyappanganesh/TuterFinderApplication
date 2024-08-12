@@ -8,7 +8,10 @@ import Search from './components/Search/Search';
 import SearchResults from './components/Search/SearchResults';
 import StudentRegister from './components/Register/Student/StudentRegister';
 import TeacherRegister from './components/Register/Teacher/TeacherRegister';
-import Register from './components/Register/Register';
+
+import Sidebar from './components/TeacherProfile/Sidebar';
+import TeacherProfileRoutes from './components/TeacherProfile/TeacherProfileRoutes';
+// import MyTution from './components/TeacherProfile/MyTution';
 
 
 
@@ -24,9 +27,12 @@ function App() {
         <Route path="/signin" element={<SignIn/>}/>
         <Route path="/search" element={<Search/>} />
         <Route path="/searchtutor" element={<SearchResults/>} />
-        <Route path="/Register" element={<Register/>} />
         <Route path="/studentRegister" element={<StudentRegister/>} />
         <Route path="/teacherRegister" element={<TeacherRegister/>} />
+        <Route path="/sidebar" element={<Sidebar/>} />
+        <Route path="*" element={<TeacherProfileRoutes/>} />
+
+        {/* <Route path="/my-tuitions" element={<MyTution/>} /> */}
         </Routes>
       </div>
     </Router>
