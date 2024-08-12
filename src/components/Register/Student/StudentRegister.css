@@ -1,62 +1,110 @@
-/* Container for the student registration page */
-.student-register-page {
+/* Container for the student registration section */
+.student-register-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  padding: 40px 20px;
+  position: relative;
   min-height: 100vh;
-  background: url('G:/AYYAPPAN/SKCET/3rd Year/Application Development/LearningManagementSystem/lms/src/assets/TeacherRegister.jpg') no-repeat center center/cover;
-  background-size: cover;
   box-sizing: border-box;
   overflow: hidden;
-  position: relative;
-  padding: 20px;
+  color: #000;
+  background: #f0f0f0; /* Neutral background color */
 }
 
-/* Overlay for the entire page */
-.student-register-page::before {
-  content: "";
+.back-button {
+  align-self: flex-start;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(169, 168, 168, 0.188);
-  z-index: 1;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #000;
+  transition: color 0.3s, transform 0.3s;
+  z-index: 2;
 }
 
-/* Container for the student registration form */
-.student-register-container {
+.back-button svg {
+  margin-right: 5px;
+}
+
+.back-button .MuiSvgIcon-root {
+  font-size: 2.5rem; /* Increase the size of the icon */
+}
+
+.back-button:hover {
+  color: #ff5722; /* Change the color on hover */
+  transform: scale(1.2); /* Slightly enlarge the button on hover */
+}
+
+.student-register-content {
   position: relative;
-  background: rgba(0, 0, 0, 0.5); /* Dark overlay background for the form container */
-  padding: 30px 20px; /* Reduce padding for a more compact appearance */
+  background: #ffffff;
+  padding: 40px;
   border-radius: 10px;
-  max-width: 500px; /* Set a more compact width */
+  max-width: 500px; /* Set maximum width for the form container */
   width: 100%;
-  z-index: 2; /* Ensure the container is above the overlay */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  z-index: 2;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Typography styling inside the form */
-.student-register-container .MuiTypography-h4 {
-  margin-bottom: 15px; /* Reduce bottom margin for a more compact layout */
-  color: #f5f50b;
-  font-size: 1.8rem; /* Slightly smaller font size for a professional look */
+.student-register-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333333;
 }
 
-/* TextField styling inside the form */
-.student-register-container .MuiTextField-root {
-  margin-bottom: 15px; /* Reduce margin between fields */
+.student-register-form {
+  display: flex;
+  flex-direction: column;
 }
 
-/* Button styling inside the form */
-.student-register-container .MuiButton-root {
-  margin-top: 20px;
-  background: #dd8060;
-  color: #050505;
+.student-register-form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.student-register-label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 18px; /* Consistent label size */
+  color: #555555;
+}
+
+.student-register-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.student-register-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.student-register-button {
+  background: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
   border-radius: 25px;
-  padding: 10px 20px; /* Adjust padding for a more compact button */
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
 }
 
-.student-register-container .MuiButton-root:hover {
-  background: #e64a19;
+.student-register-button:hover {
+  background: #0056b3;
 }

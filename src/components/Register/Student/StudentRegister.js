@@ -1,56 +1,74 @@
 import React, { useState } from 'react';
-import { TextField, Button, Container, Typography } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import './StudentRegister.css';
 
 const StudentRegister = () => {
-  const [form, setForm] = useState({
+  const [formData, setFormData] = useState({
     name: '',
     email: '',
     password: '',
   });
 
   const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
+    console.log(formData);
+    // Add your logic here to send the form data to your server or API
   };
 
+  const navigate = useNavigate();
+
   return (
-    <div className="student-register-page">
-      <Container className="student-register-container">
-        <Typography variant="h4" gutterBottom>Student Register</Typography>
-        <form onSubmit={handleSubmit}>
-          <TextField
-            label="Name"
-            name="name"
-            value={form.name}
-            onChange={handleChange}
-            fullWidth
-            margin="normal"
-          />
-          <TextField
-            label="Email"
-            name="email"
-            value={form.email}
-            onChange={handleChange}
-            fullWidth
-            margin="normal"
-          />
-          <TextField
-            label="Password"
-            name="password"
-            type="password"
-            value={form.password}
-            onChange={handleChange}
-            fullWidth
-            margin="normal"
-          />
-          <Button variant="contained" color="primary" type="submit">Register</Button>
+    <div className="student-register-container">
+      <div className="back-button" onClick={() => navigate('/')}>
+        <ArrowCircleLeftIcon />
+      </div>
+      <div className="student-register-content">
+        <h1 className="student-register-title">Student Registration</h1>
+        <form className="student-register-form" onSubmit={handleSubmit}>
+          <div className="student-register-form-group">
+            <label className="student-register-label" htmlFor="name">Name:</label>
+            <input
+              className="student-register-input"
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="student-register-form-group">
+            <label className="student-register-label" htmlFor="email">Email:</label>
+            <input
+              className="student-register-input"
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="student-register-form-group">
+            <label className="student-register-label" htmlFor="password">Password:</label>
+            <input
+              className="student-register-input"
+              type="password"
+              id="password"
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <button className="student-register-button" type="submit">Register</button>
         </form>
-      </Container>
+      </div>
     </div>
   );
 };

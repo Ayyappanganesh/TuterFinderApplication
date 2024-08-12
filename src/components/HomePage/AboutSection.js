@@ -11,13 +11,13 @@ const AboutSection = () => {
       <Card className="about-card">
         <CardContent>
           <Typography variant="h6" align="justify" className="about-text">
-            Welcome to TutorQuest – the ultimate platform designed to connect students with exceptional tutors, making learning more accessible and effective.
+            Welcome to TutorTrek – the ultimate platform designed to connect students with exceptional tutors, making learning more accessible and effective.
           </Typography>
           <Typography variant="h6" mt={2} align="justify" className="about-text">
             Our Mission
           </Typography>
           <Typography variant="body1" paragraph align="justify" className="about-text">
-            At TutorQuest, our mission is to revolutionize the way students find and connect with tutors. We believe that every learner deserves personalized, high-quality education tailored to their needs. Whether you’re looking to improve your grades, prepare for an exam, or master a new skill, our platform is here to help you achieve your academic goals.
+            At TutorTrek, our mission is to revolutionize the way students find and connect with tutors. We believe that every learner deserves personalized, high-quality education tailored to their needs. Whether you’re looking to improve your grades, prepare for an exam, or master a new skill, our platform is here to help you achieve your academic goals.
           </Typography>
           <Typography variant="h6" mt={2} align="justify" className="about-text">
             Why Choose Us?

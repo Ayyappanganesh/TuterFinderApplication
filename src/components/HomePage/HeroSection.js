@@ -13,7 +13,7 @@ const HeroSection = () => {
   return (
     <div className="hero-section">
       <Container>
-        <Typography variant="h3">Welcome to TutorQuest</Typography>
+        <Typography variant="h3">Welcome to TutorTrek</Typography>
         <Typography variant="h6">Your gateway to quality education</Typography>
         <Button variant="contained" color="primary" onClick={handleGetStarted}>
           Get Started

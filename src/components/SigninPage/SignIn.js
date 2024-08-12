@@ -34,7 +34,7 @@ const SignIn = () => {
           marginTop={40}
         >
           <Typography variant="h3" className="welcome-text">Welcome to</Typography>
-          <Typography variant="h4" className="portal-text">TutorQuest</Typography>
+          <Typography variant="h4" className="portal-text">TutorTrek</Typography>
           <Typography variant="subtitle1" className="login-text">Login to access your account</Typography>
         </Box>
       </Grid>
@@ -71,7 +71,10 @@ const SignIn = () => {
             <Button type="submit" fullWidth variant="contained" color="primary" className="button">Login</Button>
             <Grid container>
               <Grid item>
-                <Link href="/register" variant="body2" className="link">{"Don't have an account? Register"}</Link>
+                <Link href="/TeacherRegister" variant="body2" className="link">{"Don't have an account? Register as Teacher "}</Link>
+              </Grid>
+              <Grid item>
+                <Link href="/StudentRegister" variant="body2" className="link">{" Don't have an account? Register as Student"}</Link>
               </Grid>
             </Grid>
           </form>

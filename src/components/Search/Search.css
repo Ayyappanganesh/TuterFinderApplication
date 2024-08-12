@@ -31,9 +31,9 @@
   border-radius: 10px;
   max-width: 600px;
   width: 100%; /* Ensure it scales with screen size */
-  margin: 0 auto;
+
   z-index: 2; /* Ensure the search bar is above the pseudo-element */
-  margin-left: 400px;
+
 }
 
 /* General styling for elements inside the search bar */

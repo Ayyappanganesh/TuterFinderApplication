@@ -2,6 +2,7 @@
 .root {
   max-height: max-content;
   display: flex;
+  height: 100vh;
 }
 
 .image {
