@@ -10,6 +10,8 @@ const StudentRegister = () => {
     password: '',
   });
 
+  const navigate = useNavigate();
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -18,9 +20,11 @@ const StudentRegister = () => {
     e.preventDefault();
     console.log(formData);
     // Add your logic here to send the form data to your server or API
-  };
 
-  const navigate = useNavigate();
+    // Assuming the profile page URL is "/student-profile/:studentId"
+    // Replace `studentId` with actual ID from your server response
+    navigate(`/student-profile/${formData.name}`);
+  };
 
   return (
     <div className="student-register-container">

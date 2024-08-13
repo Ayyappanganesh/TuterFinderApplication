@@ -11,6 +11,7 @@ import TeacherRegister from './components/Register/Teacher/TeacherRegister';
 
 import Sidebar from './components/TeacherProfile/Sidebar';
 import TeacherProfileRoutes from './components/TeacherProfile/TeacherProfileRoutes';
+import StudentProfile from './components/StudentProfile/StudentProfile';
 // import MyTution from './components/TeacherProfile/MyTution';
 
 
@@ -31,6 +32,7 @@ function App() {
         <Route path="/teacherRegister" element={<TeacherRegister/>} />
         <Route path="/sidebar" element={<Sidebar/>} />
         <Route path="*" element={<TeacherProfileRoutes/>} />
+        <Route path="/student-profile/:studentName" element={<StudentProfile/>} />
 
         {/* <Route path="/my-tuitions" element={<MyTution/>} /> */}
         </Routes>

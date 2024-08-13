@@ -67,6 +67,7 @@ const Search = () => {
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
+    // console.log(searchDetails);
     e.preventDefault();
     try {
       const response = await axios.post('http://localhost:8080/api/teachers/search', searchDetails);
@@ -147,7 +148,7 @@ const Search = () => {
         </div>
         <button onClick={handleSubmit}>Search</button>
       </div>
-      <div className="search-results">
+      {/* <div className="search-results">
         {results.length > 0 ? (
           <ul>
             {results.map((teacher) => (
@@ -164,7 +165,7 @@ const Search = () => {
         ) : (
           <p></p>
         )}
-      </div>
+      </div> */}
     </div>
   );
 };

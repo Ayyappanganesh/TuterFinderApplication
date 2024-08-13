@@ -1,0 +1,32 @@
+.student-profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4; /* Background color for the profile page */
+    min-height: 100vh;
+  }
+  
+  .student-profile-title {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .student-profile-details {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .student-profile-details p {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  
+  .student-profile-details strong {
+    color: #007bff;
+  }
+  

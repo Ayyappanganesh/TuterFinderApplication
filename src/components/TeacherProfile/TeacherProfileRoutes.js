@@ -10,7 +10,7 @@ const TeacherProfileRoutes = () => {
   return (
     <Layout>
         <Routes>
-            <Route index path="/myaccount/myprofile" element={<MyProfile/>}/>
+            <Route index path="/myaccount" element={<MyProfile/>}/>
             <Route path="/myaccount/mytuitions" element={<MyTution/>}/>
             <Route path="/myaccount/myreview" element={<MyReview/>}/>
             <Route path="/myaccount/addtution" element={<AddTution/>}/> 

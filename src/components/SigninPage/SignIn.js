@@ -1,16 +1,49 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Box, Grid, TextField, Button, Typography, Link } from '@mui/material';
 import './SignIn.css'; // Import the CSS file
 
 const SignIn = () => {
   const navigate = useNavigate();
+  const [credentials, setCredentials] = useState({ username: '', password: '' });
+
+  const mockData = {
+    teachers: [
+      { username: 'teacher1', password: 'password1' },
+      { username: 'teacher2', password: 'password2' },
+    ],
+    students: [
+      { username: 'student1', password: 'password1' }, 
+      { username: 'student2', password: 'password2' },
+    ],
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Perform login logic here
-    // If login is successful, navigate to the home page
-    navigate('/');
+    const { username, password } = credentials;
+
+    const isTeacher = mockData.teachers.some(
+      (teacher) => teacher.username === username && teacher.password === password
+    );
+
+    const isStudent = mockData.students.some(
+      (student) => student.username === username && student.password === password
+    );
+
+    if (isTeacher) {
+      navigate('/myaccount');
+    } else if (isStudent) {
+      navigate('/search');
+    } else {
+      alert('Invalid credentials. Please try again.');
+    }
+  };
+
+  const handleChange = (event) => {
+    setCredentials({
+      ...credentials,
+      [event.target.name]: event.target.value,
+    });
   };
 
   return (
@@ -54,6 +87,7 @@ const SignIn = () => {
               autoComplete="username"
               autoFocus
               className="input"
+              onChange={handleChange}
             />
             <TextField
               variant="outlined"
@@ -66,6 +100,7 @@ const SignIn = () => {
               id="password"
               autoComplete="current-password"
               className="input"
+              onChange={handleChange}
             />
             <Link href="#" variant="body2" className="link">Forgot Password?</Link>
             <Button type="submit" fullWidth variant="contained" color="primary" className="button">Login</Button>
