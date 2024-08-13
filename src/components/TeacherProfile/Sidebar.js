@@ -9,7 +9,11 @@ const Sidebar = () => {
         <img src="/path/to/logo.png" alt="Logo" className="logo-image-def" />
       </div>
       <nav className="nav-links-ghi">
+<<<<<<< HEAD
         <Link to="/myaccount" className="nav-link-jkl">Profile</Link>
+=======
+        <Link to="/myaccount/myprofile" className="nav-link-jkl">Profile</Link>
+>>>>>>> c9a721c2760a4a20330d9ba42e07ad2f7882b12a
         <Link to="/myaccount/mytuitions" className="nav-link-jkl">My Tuitions</Link>
         <Link to="/myaccount/myreview" className="nav-link-jkl">Review</Link>
       </nav>
